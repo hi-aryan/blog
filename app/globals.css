@@ -1,5 +1,12 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 body {
   font-family: system-ui, sans-serif;
+}
+
+/* custom theme variables */
+@theme {
+  --color-background: 0 0% 100%;
+  --color-foreground: 0 0% 10%;
 }
