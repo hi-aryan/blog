@@ -46,7 +46,7 @@ export function GradientCard({
             {/* Mouse-following glow circle */}
             <div
                 className={cn(
-                    "-translate-x-1/2 -translate-y-1/2 absolute transform-gpu rounded-full bg-cyan-200/30 transition-transform duration-500 group-hover:scale-[3]",
+                    "-translate-x-1/2 -translate-y-1/2 absolute transform-gpu rounded-full bg-cyan-200/20 transition-transform duration-500 group-hover:scale-[4]",
                     isMouseInside ? "opacity-100" : "opacity-0",
                 )}
                 style={{
