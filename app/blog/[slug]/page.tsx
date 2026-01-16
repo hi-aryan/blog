@@ -1,8 +1,10 @@
 import { getPostBySlug, getAllPosts } from "@/lib/blog";
 import PostHeader from "@/components/blog/post-header";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { mdxComponents } from "@/components/blog/mdx-styles";
 
 interface Props {
     params: Promise<{ slug: string }>;
@@ -41,14 +43,12 @@ export default async function BlogPostPage({ params }: Props) {
                 <div className="prose prose-neutral dark:prose-invert max-w-none">
                     <MDXRemote
                         source={post.content}
-                        components={{
-                            img: (props) => (
-                                <img
-                                    {...props}
-                                    className="rounded-lg my-8 mx-auto max-w-[400px] w-full"
-                                />
-                            ),
+                        options={{
+                            mdxOptions: {
+                                remarkPlugins: [remarkGfm],
+                            },
                         }}
+                        components={mdxComponents}
                     />
                 </div>
             </article>
