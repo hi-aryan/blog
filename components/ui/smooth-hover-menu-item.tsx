@@ -19,8 +19,8 @@ export function SmoothHoverMenuItem({
             className={cn(
                 "rounded-lg border overflow-hidden cursor-pointer",
                 isHovered
-                    ? "border-neutral-400/30 scale-105"
-                    : "border-neutral-400/0 scale-100",
+                    ? "border-border/80 scale-105"
+                    : "border-border/0 scale-100",
             )}
             style={{
                 transition: "border-color, transform",
