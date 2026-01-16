@@ -8,7 +8,7 @@ interface PostHeaderProps {
 export default function PostHeader({ post }: PostHeaderProps) {
     return (
         <div className="space-y-4 text-center">
-            <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
+            <h1 className="text-3xl font-bold tracking-tight lg:text-4xl">
                 {post.title}
             </h1>
             <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">

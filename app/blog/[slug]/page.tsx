@@ -39,7 +39,17 @@ export default async function BlogPostPage({ params }: Props) {
             <article className="mx-auto max-w-3xl space-y-8">
                 <PostHeader post={post} />
                 <div className="prose prose-neutral dark:prose-invert max-w-none">
-                    <MDXRemote source={post.content} />
+                    <MDXRemote
+                        source={post.content}
+                        components={{
+                            img: (props) => (
+                                <img
+                                    {...props}
+                                    className="rounded-lg my-8 mx-auto max-w-[400px] w-full"
+                                />
+                            ),
+                        }}
+                    />
                 </div>
             </article>
         );
