@@ -6,6 +6,8 @@ export const SOCIAL_LINKS = [
 ];
 
 export const NAV_LINKS = [
-    { name: "Home", href: "/" },
-    { name: "Blog", href: "/blog" },
+    { name: "home", href: "/" },
+    { name: "blog", href: "/blog" },
+    { name: "quotes", href: "/quotes" },
+    { name: "me", href: "/me" },
 ];
