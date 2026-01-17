@@ -5,6 +5,7 @@ import { useState } from "react";
 import { NAV_LINKS } from "@/lib/constants";
 import { SmoothHoverMenuItem } from "@/components/ui/smooth-hover-menu-item";
 
+
 export default function Sidebar() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -69,6 +70,7 @@ export default function Sidebar() {
                             </SmoothHoverMenuItem>
                         </Link>
                     ))}
+
                 </nav>
             </aside>
         </>
