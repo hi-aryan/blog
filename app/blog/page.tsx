@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/lib/blog";
-import PostCard from "@/components/blog/post-card";
+import { AnimatedPostList } from "@/components/blog/animated-post-list";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,11 +17,7 @@ export default function BlogPage() {
                     all posts, sorted by date.
                 </p>
             </div>
-            <div className="grid gap-10 max-w-2xl mx-auto">
-                {posts.map((post) => (
-                    <PostCard key={post.slug} post={post} />
-                ))}
-            </div>
+            <AnimatedPostList posts={posts} />
         </div>
     );
 }

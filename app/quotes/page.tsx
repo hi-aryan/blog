@@ -1,4 +1,7 @@
+'use client';
+
 import QuoteCardStack from "@/components/ui/quote-card-stack";
+import { AnimatedItem } from "@/components/ui/animated-item";
 
 // Example quotes - you can replace these with your own
 const quotes = [
@@ -62,13 +65,15 @@ const quotes = [
 export default function QuotesPage() {
     return (
         <div className="flex h-full w-full items-center justify-center">
-            <QuoteCardStack
-                items={quotes}
-                cardHeight={360}
-                cardWidth={560}
-                perspective={1200}
-                transitionDuration={200}
-            />
+            <AnimatedItem animation="slideUp" duration={0.3}>
+                <QuoteCardStack
+                    items={quotes}
+                    cardHeight={360}
+                    cardWidth={560}
+                    perspective={1200}
+                    transitionDuration={200}
+                />
+            </AnimatedItem>
         </div>
     );
 }

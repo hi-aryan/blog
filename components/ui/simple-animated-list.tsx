@@ -1,8 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
+import { AnimatedItem } from '@/components/ui/animated-item';
 
 interface ListItem {
     label: string;
@@ -14,28 +13,6 @@ interface SimpleAnimatedListProps {
     className?: string;
 }
 
-const AnimatedItem = ({
-    children,
-    delay = 0
-}: {
-    children: React.ReactNode;
-    delay?: number;
-}) => {
-    const ref = useRef(null);
-    const inView = useInView(ref, { amount: 0.5 });
-
-    return (
-        <motion.div
-            ref={ref}
-            initial={{ scale: 0.7, opacity: 0 }}
-            animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.7, opacity: 0 }}
-            transition={{ duration: 0.2, delay }}
-        >
-            {children}
-        </motion.div>
-    );
-};
-
 export default function SimpleAnimatedList({
     items = [
         { label: 'Item 1', href: '/' },
@@ -46,7 +23,14 @@ export default function SimpleAnimatedList({
     return (
         <div className={`flex flex-col items-center gap-3 ${className}`}>
             {items.map((item, index) => (
-                <AnimatedItem key={index} delay={0.05 * index}>
+                <AnimatedItem
+                    key={index}
+                    delay={0.05 * index}
+                    animation="scale"
+                    once={false}
+                    amount={0.5}
+                    duration={0.2}
+                >
                     <Link
                         href={item.href}
                         target={item.href.startsWith('http') ? '_blank' : undefined}
