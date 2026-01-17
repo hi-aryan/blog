@@ -61,7 +61,7 @@ const quotes = [
 
 export default function QuotesPage() {
     return (
-        <div className="flex min-h-screen items-center justify-center p-4">
+        <div className="flex h-full w-full items-center justify-center">
             <QuoteCardStack
                 items={quotes}
                 cardHeight={360}

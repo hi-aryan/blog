@@ -129,3 +129,22 @@ body {
     @apply bg-background text-foreground transition-colors duration-400;
   }
 }
+
+/* Hide all scrollbars globally while keeping scroll functionality */
+html {
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Edge */
+}
+
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
