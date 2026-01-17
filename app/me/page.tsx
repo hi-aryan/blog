@@ -12,7 +12,7 @@ const features = [
             <img
                 src="/ratekth.png"
                 alt="ratekth"
-                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+                className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
             />
         ),
     },
@@ -26,21 +26,7 @@ const features = [
             <img
                 src="/aryan.jpeg"
                 alt="aryan"
-                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
-            />
-        ),
-    },
-    {
-        name: "google workshop",
-        description: "poster for google workshop event",
-        href: "#",
-        cta: "see it",
-        className: "col-span-3 lg:col-span-1",
-        background: (
-            <img
-                src="/google-workshop.png"
-                alt="google workshop"
-                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+                className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
             />
         ),
     },
@@ -54,7 +40,7 @@ const features = [
             <img
                 src="/curatify.png"
                 alt="curatify"
-                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+                className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
             />
         ),
     },
@@ -68,12 +54,54 @@ const features = [
             <img
                 src="/malik.png"
                 alt="malik dalasi"
-                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+                className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
             />
         ),
     },
     {
-        name: "design 1",
+        name: "google workshop",
+        description: "poster for google workshop event",
+        href: "#",
+        cta: "see it",
+        className: "col-span-3 lg:col-span-1",
+        background: (
+            <img
+                src="/google-workshop.png"
+                alt="google workshop"
+                className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "ratekth ad",
+        description: "ad campaign for ratekth",
+        href: "#",
+        cta: "see it",
+        className: "col-span-3 lg:col-span-1",
+        background: (
+            <img
+                src="/ratekth-ad.png"
+                alt="ratekth ad"
+                className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "norrsken ad",
+        description: "ad campaign for norrsken",
+        href: "#",
+        cta: "see it",
+        className: "col-span-3 lg:col-span-1",
+        background: (
+            <img
+                src="/norrsken.png"
+                alt="norrsken ad"
+                className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "lil design",
         description: "testing web design",
         className: "col-span-3 lg:col-span-1",
         href: "https://driving-moment-495028.framer.app/",
