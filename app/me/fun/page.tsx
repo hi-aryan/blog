@@ -3,51 +3,101 @@ import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 
 const features = [
     {
-        name: "Save your files",
-        description: "We automatically save your files as you type.",
-        href: "#",
-        cta: "Learn more",
-        className: "col-span-3 lg:col-span-1",
-        background: (
-            <div className="absolute inset-0 flex items-center justify-center bg-zinc-100 dark:bg-zinc-900 opacity-50 group-hover:opacity-100 transition-opacity">
-                <p className="text-xs text-zinc-500 font-mono">Marquee Placeholder</p>
-            </div>
-        ),
-    },
-    {
-        name: "Notifications",
-        description: "Get notified when something happens.",
-        href: "#",
-        cta: "Learn more",
+        name: "ratekth",
+        description: "course reviews for kth students",
+        href: "https://ratekth.se",
+        cta: "check it out",
         className: "col-span-3 lg:col-span-2",
         background: (
-            <div className="absolute inset-0 flex items-center justify-center bg-zinc-100 dark:bg-zinc-900 opacity-50 group-hover:opacity-100 transition-opacity">
-                <p className="text-xs text-zinc-500 font-mono">Animated List Placeholder</p>
-            </div>
+            <img
+                src="/ratekth.png"
+                alt="ratekth"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
         ),
     },
     {
-        name: "Integrations",
-        description: "Supports 100+ integrations and counting.",
+        name: "find me",
+        description: "",
+        className: "col-span-3 lg:col-span-1",
+        href: "/me",
+        cta: "links",
+        background: (
+            <img
+                src="/aryan.jpeg"
+                alt="aryan"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "google workshop",
+        description: "poster for google workshop event",
         href: "#",
-        cta: "Learn more",
+        cta: "see it",
+        className: "col-span-3 lg:col-span-1",
+        background: (
+            <img
+                src="/google-workshop.png"
+                alt="google workshop"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "curatify",
+        description: "music curator and social network",
+        href: "https://curatify.se",
+        cta: "check it out",
         className: "col-span-3 lg:col-span-2",
         background: (
-            <div className="absolute inset-0 flex items-center justify-center bg-zinc-100 dark:bg-zinc-900 opacity-50 group-hover:opacity-100 transition-opacity">
-                <p className="text-xs text-zinc-500 font-mono">Animated Beam Placeholder</p>
-            </div>
+            <img
+                src="/curatify.png"
+                alt="curatify"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
         ),
     },
     {
-        name: "Calendar",
-        description: "Use the calendar to filter your files by date.",
+        name: "design 2",
+        description: "prototype website for swedish artist",
         className: "col-span-3 lg:col-span-1",
-        href: "#",
-        cta: "Learn more",
+        href: "https://authentic-tenure-513391.framer.app/",
+        cta: "see it",
         background: (
-            <div className="absolute inset-0 flex items-center justify-center bg-zinc-100 dark:bg-zinc-900 opacity-50 group-hover:opacity-100 transition-opacity">
-                <p className="text-xs text-zinc-500 font-mono">Calendar Placeholder</p>
-            </div>
+            <img
+                src="/malik.png"
+                alt="malik dalasi"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "design 1",
+        description: "testing web design",
+        className: "col-span-3 lg:col-span-1",
+        href: "https://driving-moment-495028.framer.app/",
+        cta: "see it",
+        background: (
+            <img
+                src="/oldman.png"
+                alt="old man"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "video editing",
+        description: "",
+        className: "col-span-3 lg:col-span-1",
+        href: "https://www.youtube.com/shorts/O8NNofU7tyc",
+        cta: "hmmm",
+        background: (
+            <img
+                src="/felixdennis.png"
+                alt="felix dennis"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
         ),
     },
 ];
