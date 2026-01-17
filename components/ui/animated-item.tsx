@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { motion, useInView, Variant } from 'framer-motion';
+import { motion, useInView, TargetAndTransition } from 'framer-motion';
 
 type AnimationType = 'slideRight' | 'slideLeft' | 'slideUp' | 'slideDown' | 'scale' | 'fade';
 
@@ -14,7 +14,7 @@ interface AnimatedItemProps {
     duration?: number;
 }
 
-const animations: Record<AnimationType, { initial: Variant; animate: Variant }> = {
+const animations: Record<AnimationType, { initial: TargetAndTransition; animate: TargetAndTransition }> = {
     slideRight: {
         initial: { opacity: 0, x: 50 },
         animate: { opacity: 1, x: 0 },
