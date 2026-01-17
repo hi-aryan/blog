@@ -128,6 +128,20 @@ const features = [
             />
         ),
     },
+    {
+        name: "prompt library",
+        description: "collection of prompts i use often",
+        className: "col-span-3 lg:col-span-1",
+        href: "https://github.com/hi-aryan/prompt-library",
+        cta: "check it out",
+        background: (
+            <img
+                src="/robot.png"
+                alt="prompt library"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
 ];
 
 export default function MePage() {
