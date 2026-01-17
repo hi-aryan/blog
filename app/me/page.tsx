@@ -1,17 +1,115 @@
-import SimpleAnimatedList from '@/components/ui/simple-animated-list';
+import { cn } from "@/lib/utils";
+import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
+
+const features = [
+    {
+        name: "ratekth",
+        description: "course reviews for kth students",
+        href: "https://ratekth.se",
+        cta: "check it out",
+        className: "col-span-3 lg:col-span-2",
+        background: (
+            <img
+                src="/ratekth.png"
+                alt="ratekth"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "find me",
+        description: "",
+        className: "col-span-3 lg:col-span-1",
+        href: "/me/links",
+        cta: "links",
+        background: (
+            <img
+                src="/aryan.jpeg"
+                alt="aryan"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "google workshop",
+        description: "poster for google workshop event",
+        href: "#",
+        cta: "see it",
+        className: "col-span-3 lg:col-span-1",
+        background: (
+            <img
+                src="/google-workshop.png"
+                alt="google workshop"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "curatify",
+        description: "music curator and social network",
+        href: "https://curatify.se",
+        cta: "check it out",
+        className: "col-span-3 lg:col-span-2",
+        background: (
+            <img
+                src="/curatify.png"
+                alt="curatify"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "design 2",
+        description: "prototype website for swedish artist",
+        className: "col-span-3 lg:col-span-1",
+        href: "https://authentic-tenure-513391.framer.app/",
+        cta: "see it",
+        background: (
+            <img
+                src="/malik.png"
+                alt="malik dalasi"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "design 1",
+        description: "testing web design",
+        className: "col-span-3 lg:col-span-1",
+        href: "https://driving-moment-495028.framer.app/",
+        cta: "see it",
+        background: (
+            <img
+                src="/oldman.png"
+                alt="old man"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "video editing",
+        description: "",
+        className: "col-span-3 lg:col-span-1",
+        href: "https://www.youtube.com/shorts/O8NNofU7tyc",
+        cta: "hmmm",
+        background: (
+            <img
+                src="/felixdennis.png"
+                alt="felix dennis"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-80 transition-opacity duration-300"
+            />
+        ),
+    },
+];
 
 export default function MePage() {
     return (
-        <div className="flex min-h-[80vh] items-center justify-center">
-            <SimpleAnimatedList
-                items={[
-                    { label: 'having fun', href: '/me/fun' },
-                    { label: 'github', href: 'https://github.com/hi-aryan' },
-                    { label: 'youtube', href: 'https://www.youtube.com/@hi-aryan' },
-                    { label: 'twitter', href: 'https://x.com/leo_aryan0' },
-                    { label: 'linkedin', href: 'https://www.linkedin.com/in/aryan-leo-begdeli-114889240' },
-                ]}
-            />
+        <div className="flex min-h-[80vh] items-center justify-center p-4">
+            <BentoGrid>
+                {features.map((feature, idx) => (
+                    <BentoCard key={idx} {...feature} />
+                ))}
+            </BentoGrid>
         </div>
     );
 }
