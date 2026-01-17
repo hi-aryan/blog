@@ -62,12 +62,12 @@ const BentoCard = ({
 
         <div
             className={cn(
-                "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                "pointer-events-none absolute bottom-0 flex w-full translate-y-full transform-gpu flex-row items-center p-6 transition-all duration-300 group-hover:translate-y-0"
             )}
         >
             <a
                 href={href}
-                className="group/cta pointer-events-auto flex items-center p-0 text-sm font-medium"
+                className="group/cta pointer-events-auto flex items-center rounded-full bg-neutral-100/50 px-3 py-1 text-sm font-medium backdrop-blur-md transition-colors dark:bg-neutral-800/50"
             >
                 {cta}
                 <ArrowRight className="ms-2 h-4 w-4 transition-transform duration-200 group-hover/cta:translate-x-1" />
