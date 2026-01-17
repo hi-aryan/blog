@@ -1,14 +1,18 @@
-import { ComponentPropsWithoutRef, ReactNode } from "react"
+"use client"
+
+import { ReactNode } from "react"
 import { ArrowRight } from "lucide-react"
+import { HTMLMotionProps, motion } from "framer-motion"
+import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 
-interface BentoGridProps extends ComponentPropsWithoutRef<"div"> {
+interface BentoGridProps extends HTMLMotionProps<"div"> {
     children: ReactNode
     className?: string
 }
 
-interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
+interface BentoCardProps extends HTMLMotionProps<"div"> {
     name: string
     className: string
     background: ReactNode
@@ -19,7 +23,17 @@ interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
 
 const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
     return (
-        <div
+        <motion.div
+            initial="initial"
+            animate="animate"
+            variants={{
+                initial: {},
+                animate: {
+                    transition: {
+                        staggerChildren: 0.1,
+                    },
+                },
+            }}
             className={cn(
                 "grid w-full auto-rows-[22rem] grid-cols-3 gap-4",
                 className
@@ -27,7 +41,7 @@ const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
             {...props}
         >
             {children}
-        </div>
+        </motion.div>
     )
 }
 
@@ -40,10 +54,15 @@ const BentoCard = ({
     cta,
     ...props
 }: BentoCardProps) => (
-    <div
+    <motion.div
         key={name}
+        variants={{
+            initial: { opacity: 0, y: 20 },
+            animate: { opacity: 1, y: 0 },
+        }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
         className={cn(
-            "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl",
+            "group relative col-span-3 flex flex-col justify-end overflow-hidden rounded-xl",
             // light styles
             "bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
             // dark styles
@@ -66,17 +85,17 @@ const BentoCard = ({
                 "pointer-events-none absolute bottom-0 flex w-full translate-y-full transform-gpu flex-row items-center p-6 transition-all duration-300 group-hover:translate-y-0"
             )}
         >
-            <a
+            <Link
                 href={href}
                 className="group/cta pointer-events-auto flex items-center rounded-full bg-neutral-100/50 px-3 py-1 text-sm font-medium backdrop-blur-md transition-colors dark:bg-neutral-800/50"
             >
                 {cta}
                 <ArrowRight className="ms-2 h-4 w-4 transition-transform duration-200 group-hover/cta:translate-x-1" />
-            </a>
+            </Link>
         </div>
 
         <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
-    </div>
+    </motion.div>
 )
 
 export { BentoCard, BentoGrid }

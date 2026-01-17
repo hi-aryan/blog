@@ -1,5 +1,6 @@
 import { ComponentProps } from "react";
 import { ArrowUp } from "lucide-react";
+import Link from "next/link";
 
 export const mdxComponents = {
     img: (props: ComponentProps<"img">) => (
@@ -32,7 +33,16 @@ export const mdxComponents = {
                 </a>
             );
         }
-        return <a {...props} />;
+        const href = props.href;
+        if (href?.startsWith("/") || href?.startsWith("#")) {
+            return (
+                <Link href={href} {...props} className={props.className}>
+                    {props.children}
+                </Link>
+            );
+        }
+
+        return <a target="_blank" rel="noopener noreferrer" {...props} />;
     },
     section: (props: ComponentProps<"section">) => {
         if ("data-footnotes" in props) {
