@@ -12,13 +12,12 @@ export default function BlogPage() {
 
     return (
         <div className="space-y-10">
-            <div className="space-y-4">
-                <h1 className="text-4xl font-bold tracking-tight">Blog</h1>
+            <div className="space-y-4 max-w-2xl mx-auto">
                 <p className="text-xl text-muted-foreground">
                     all posts, sorted by date.
                 </p>
             </div>
-            <div className="grid gap-10">
+            <div className="grid gap-10 max-w-2xl mx-auto">
                 {posts.map((post) => (
                     <PostCard key={post.slug} post={post} />
                 ))}
