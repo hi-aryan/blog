@@ -27,7 +27,7 @@ export default function SimpleAnimatedList({
                     key={index}
                     delay={0.05 * index}
                     animation="scale"
-                    once={false}
+                    once={true}
                     amount={0.5}
                     duration={0.2}
                 >

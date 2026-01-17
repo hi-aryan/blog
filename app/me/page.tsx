@@ -2,9 +2,10 @@ import SimpleAnimatedList from '@/components/ui/simple-animated-list';
 
 export default function MePage() {
     return (
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="flex min-h-[80vh] items-center justify-center">
             <SimpleAnimatedList
                 items={[
+                    { label: 'having fun', href: '/' },
                     { label: 'github', href: 'https://github.com/hi-aryan' },
                     { label: 'youtube', href: 'https://www.youtube.com/@hi-aryan' },
                     { label: 'twitter', href: 'https://x.com/leo_aryan0' },

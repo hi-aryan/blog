@@ -64,7 +64,7 @@ const quotes = [
 
 export default function QuotesPage() {
     return (
-        <div className="flex h-full w-full items-center justify-center">
+        <div className="flex min-h-[80vh] items-center justify-center">
             <AnimatedItem animation="slideUp" duration={0.3}>
                 <QuoteCardStack
                     items={quotes}
