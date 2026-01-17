@@ -6,7 +6,7 @@ export default function Home() {
       <p className="text-3xl font-bold sm:text-4xl">
         {/* <span>{"some dummy text "}</span> */}
         <Typewriter
-          text={["hi", "u probably dont know me but", "i hope u like my lil website :)"]}
+          text={["hi", "u probably dont know me but", "i hope u enjoy my lil website :)"]}
           className="text-foreground"
           waitTime={1000}
           cursorChar={"_"}
