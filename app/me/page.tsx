@@ -31,6 +31,20 @@ const features = [
         ),
     },
     {
+        name: "web design",
+        description: "prototype website for swedish artist",
+        className: "col-span-3 lg:col-span-1",
+        href: "https://authentic-tenure-513391.framer.app/",
+        cta: "see it",
+        background: (
+            <img
+                src="/malik.png"
+                alt="malik dalasi"
+                className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
         name: "curatify",
         description: "music curator and social network",
         href: "https://curatify.se",
@@ -40,20 +54,6 @@ const features = [
             <img
                 src="/curatify.png"
                 alt="curatify"
-                className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
-            />
-        ),
-    },
-    {
-        name: "design 2",
-        description: "prototype website for swedish artist",
-        className: "col-span-3 lg:col-span-1",
-        href: "https://authentic-tenure-513391.framer.app/",
-        cta: "see it",
-        background: (
-            <img
-                src="/malik.png"
-                alt="malik dalasi"
                 className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
             />
         ),
