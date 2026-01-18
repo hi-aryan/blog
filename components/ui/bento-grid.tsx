@@ -55,7 +55,8 @@ const BentoCard = ({
     href,
     cta,
     onClick,
-    modalImage,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    modalImage: _modalImage,
     ...props
 }: BentoCardProps) => (
     <motion.div

@@ -39,7 +39,6 @@ const QuoteCardStack: React.FC<QuoteCardStackProps> = ({
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [isScrolling, setIsScrolling] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
     const scrollY = useMotionValue(0);
@@ -238,7 +237,7 @@ const QuoteCardStack: React.FC<QuoteCardStackProps> = ({
                 zIndex,
             };
         },
-        [currentIndex, items.length, clamp]
+        [currentIndex, items.length, clamp, FRAME_OFFSET]
     );
 
     return (
@@ -269,7 +268,6 @@ const QuoteCardStack: React.FC<QuoteCardStackProps> = ({
                 {items.map((item, i) => {
                     const transform = getCardTransform(i);
                     const isActive = i === currentIndex;
-                    const isHovered = hoveredIndex === i;
 
                     return (
                         <motion.div
@@ -283,11 +281,7 @@ const QuoteCardStack: React.FC<QuoteCardStackProps> = ({
                             data-active={isActive}
                             initial={false}
                             key={`quote-card-${item.id}`}
-                            onBlur={() => setHoveredIndex(null)}
                             onClick={isActive ? handleCardClick : undefined}
-                            onFocus={() => isActive && setHoveredIndex(i)}
-                            onMouseEnter={() => isActive && setHoveredIndex(i)}
-                            onMouseLeave={() => setHoveredIndex(null)}
                             style={{
                                 height: `${cardHeight}px`,
                                 width: `${cardWidth}px`,
