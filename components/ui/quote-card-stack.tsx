@@ -296,7 +296,6 @@ const QuoteCardStack: React.FC<QuoteCardStackProps> = ({
                                 transitionDuration: "200ms",
                                 transitionTimingFunction: "ease-in-out",
                             }}
-                            tabIndex={isActive ? 0 : -1}
                             transition={{
                                 type: "spring",
                                 stiffness: 250,
