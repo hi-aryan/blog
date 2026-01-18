@@ -19,6 +19,8 @@ interface BentoCardProps extends HTMLMotionProps<"div"> {
     description: string
     href: string
     cta: string
+    onClick?: () => void
+    modalImage?: string
 }
 
 const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
@@ -52,6 +54,8 @@ const BentoCard = ({
     description,
     href,
     cta,
+    onClick,
+    modalImage,
     ...props
 }: BentoCardProps) => (
     <motion.div
@@ -87,6 +91,12 @@ const BentoCard = ({
         >
             <Link
                 href={href}
+                onClick={(e) => {
+                    if (onClick) {
+                        e.preventDefault()
+                        onClick()
+                    }
+                }}
                 className="group/cta pointer-events-auto flex items-center rounded-full bg-neutral-100/50 px-3 py-1 text-sm font-medium backdrop-blur-md transition-colors dark:bg-neutral-800/50"
             >
                 {cta}
