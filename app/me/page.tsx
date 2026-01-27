@@ -8,7 +8,7 @@ export default function MePage() {
                     i like building, reading, writing, video editing, and gym/running. i believe modern humans consume too much and produce too little. i’m trying to reverse that for myself.
                 </p>
                 <p>
-                    creating, whether it be content, web apps, workout plan for a friend, or a blogpost has been my highest calling lately. preferably something that helps people live more fulfilled lives.
+                    creating, whether it be content, web apps, workout plan for a friend, or a blogpost, has been my highest calling lately. preferably something that helps people live more fulfilled lives.
                 </p>
                 <p>
                     (my daily journal is currently private.)
