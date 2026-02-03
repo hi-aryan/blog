@@ -16,7 +16,7 @@ interface BentoCardProps extends HTMLMotionProps<"div"> {
     name: string
     className: string
     background: ReactNode
-    description: string
+    description: ReactNode
     href: string
     cta: string
     onClick?: () => void
@@ -82,7 +82,7 @@ const BentoCard = ({
             <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
                 {name}
             </h3>
-            <p className="max-w-lg text-neutral-400">{description}</p>
+            <p className="max-w-lg text-neutral-400 pointer-events-auto">{description}</p>
         </div>
 
         <div

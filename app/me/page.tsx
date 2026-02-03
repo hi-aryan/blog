@@ -10,9 +10,6 @@ export default function MePage() {
                 <p>
                     creating, whether it be content, web apps, workout plan for a friend, or a blogpost, has been my highest calling lately. preferably something that helps people live more fulfilled lives.
                 </p>
-                <p>
-                    (my daily journal is currently private.)
-                </p>
             </div>
             <MeGrid />
         </div>

@@ -6,7 +6,7 @@ import { ImageModal } from "@/components/ui/image-modal"
 
 interface Feature {
     name: string
-    description: string
+    description: React.ReactNode
     href: string
     cta: string
     className: string
@@ -53,6 +53,26 @@ const features: Feature[] = [
             <img
                 src="/malik.png"
                 alt="malik dalasi"
+                className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
+            />
+        ),
+    },
+    {
+        name: "h2h",
+        description: (
+            <>
+                <a href="https://drive.google.com/file/d/1z9uFOGjv6raRoILPKcgrPvJRcq7RD31O/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="underline">pitch</a>
+                {" and "}
+                <a href="https://h2h.madewithtea.com" target="_blank" rel="noopener noreferrer" className="underline">app</a>
+            </>
+        ),
+        href: "https://h2h.madewithtea.com",
+        cta: "check it out",
+        className: "col-span-3 lg:col-span-2",
+        background: (
+            <img
+                src="/hands.png"
+                alt="h2h"
                 className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
             />
         ),
