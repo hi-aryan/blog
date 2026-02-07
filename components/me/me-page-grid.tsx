@@ -58,7 +58,7 @@ const features: Feature[] = [
         ),
     },
     {
-        name: "h2h",
+        name: "hands",
         description: (
             <>
                 <a href="https://drive.google.com/file/d/1z9uFOGjv6raRoILPKcgrPvJRcq7RD31O/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="underline">pitch</a>
@@ -72,7 +72,7 @@ const features: Feature[] = [
         background: (
             <img
                 src="/hands.png"
-                alt="h2h"
+                alt="hands"
                 className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
             />
         ),
