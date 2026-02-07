@@ -63,10 +63,10 @@ const features: Feature[] = [
             <>
                 <a href="https://drive.google.com/file/d/1z9uFOGjv6raRoILPKcgrPvJRcq7RD31O/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="underline">pitch</a>
                 {" and "}
-                <a href="https://h2h.madewithtea.com" target="_blank" rel="noopener noreferrer" className="underline">app</a>
+                <a href="https://www.usehands.xyz/" target="_blank" rel="noopener noreferrer" className="underline">app</a>
             </>
         ),
-        href: "https://h2h.madewithtea.com",
+        href: "https://www.usehands.xyz/",
         cta: "check it out",
         className: "col-span-3 lg:col-span-2",
         background: (
