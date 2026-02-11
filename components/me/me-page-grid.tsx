@@ -44,15 +44,16 @@ const features: Feature[] = [
         ),
     },
     {
-        name: "web design",
-        description: "prototype website for swedish artist",
-        className: "col-span-3 lg:col-span-1",
-        href: "https://authentic-tenure-513391.framer.app/",
+        name: "ratekth ad",
+        description: "ad campaign for ratekth",
+        href: "#",
         cta: "see it",
+        className: "col-span-3 lg:col-span-1",
+        modalImage: "/ratekth-ad.png",
         background: (
             <img
-                src="/malik.png"
-                alt="malik dalasi"
+                src="/ratekth-ad.png"
+                alt="ratekth ad"
                 className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
             />
         ),
@@ -107,16 +108,15 @@ const features: Feature[] = [
         ),
     },
     {
-        name: "ratekth ad",
-        description: "ad campaign for ratekth",
-        href: "#",
-        cta: "see it",
+        name: "web design",
+        description: "prototype website for swedish artist",
         className: "col-span-3 lg:col-span-1",
-        modalImage: "/ratekth-ad.png",
+        href: "https://authentic-tenure-513391.framer.app/",
+        cta: "see it",
         background: (
             <img
-                src="/ratekth-ad.png"
-                alt="ratekth ad"
+                src="/malik.png"
+                alt="malik dalasi"
                 className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-90 transition-opacity duration-300"
             />
         ),
